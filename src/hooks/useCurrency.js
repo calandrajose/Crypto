@@ -31,13 +31,13 @@ const useCryptocurrency = (label, initialState, options) => {
             <Select
                 onChange={e => setState(e.target.value)}
                 value={state}>
+                    <option>-Select-</option>
                 {options.map(currency => (
                     <option
                         key={currency.code}
                         value={currency.code}
                     >{currency.currencyName}</option>
                 ))}
-                <option value='ARG'>Argentina</option>
             </Select>
         </Fragment>
     );
